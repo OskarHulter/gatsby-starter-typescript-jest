@@ -1,11 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
-const SidebarMenu: React.FC<Props> = props => (
-  <StyledMenu open={props.open}>
-    <a href="/">Menu Item 1</a>
-    <a href="/">Menu Item 2</a>
-    <a href="/">Menu Item 3</a>
+const SidebarMenu: React.FC<Props> = ({ open, ...props }) => (
+  <StyledMenu open={open}>
+    <Link to="/">Menu Item 1</Link>
+    <Link to="/MusicPlayer/">Menu Item 2</Link>
+    <Link to="/MusicPlayer/">Menu Item 3</Link>
   </StyledMenu>
 )
 

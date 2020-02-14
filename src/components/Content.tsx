@@ -1,5 +1,13 @@
-import * as React from "react"
-import styled from "styled-components"
+import * as React from 'react'
+import styled from 'styled-components'
+
+const Content: React.FC<Props> = ({ children, ...props }) => (
+  <ContentContainer>{children}</ContentContainer>
+)
+
+interface Props {
+  children?: any
+}
 
 const ContentContainer = styled.main`
   grid-area: content;
@@ -9,13 +17,5 @@ const ContentContainer = styled.main`
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `
-
-const Content: React.FC<Props> = (props: Props) => (
-  <ContentContainer>{props.children}</ContentContainer>
-)
-
-interface Props {
-  children?: any
-}
 
 export default Content

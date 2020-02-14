@@ -1,12 +1,12 @@
-import * as React from "react"
-import styled from "styled-components"
+import * as React from 'react'
+import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
+  grid-area: footer;
+  height: 15vh;
   p {
     color: red;
   }
-  grid-area: footer;
-  height: 15vh;
 `
 
 const Footer: React.FC = () => (

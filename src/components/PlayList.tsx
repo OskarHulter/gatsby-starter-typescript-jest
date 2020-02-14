@@ -7,7 +7,7 @@ const StyledList = styled.ul`
   font-size: 1em;
 `
 
-const PlayList = () => {
+const PlayList: React.FC = () => {
   const songs = fetchedSongs.map(song => (
     <Song
       key={song.title}

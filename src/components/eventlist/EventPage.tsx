@@ -1,7 +1,6 @@
 import * as React from 'react'
-import HamburgerButton from './HamburgerButton'
-import SidebarMenu from './SidebarMenu'
-import { useOnClickOutside } from './hooks'
+import { useOnClickOutside } from '../Hamburger/hooks'
+import EventButton from './EventButton'
 
 const MenuContainer: React.FC = () => {
   const [open, setOpen] = React.useState(false)
@@ -10,8 +9,7 @@ const MenuContainer: React.FC = () => {
 
   return (
     <div ref={node}>
-      <HamburgerButton open={open} setOpen={setOpen} />
-      <SidebarMenu open={open} />
+      <EventButton open={open} setOpen={setOpen} />
     </div>
   )
 }

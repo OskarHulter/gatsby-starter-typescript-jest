@@ -1,9 +1,11 @@
-import * as React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import * as React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const HeaderContainer = styled.header`
-  background: "purple";
+  grid-area: header;
+  height: 30vh;
+  background: 'purple';
   margin-bottom: 1.45rem;
   margin: 0 auto;
   max-width: 960;
@@ -11,18 +13,16 @@ const HeaderContainer = styled.header`
   p {
     color: red;
   }
-  grid-area: header;
-  height: 30vh;
 `
 
 const Heading = styled.h1`
   margin: 0;
 `
 
-const Header: React.FC<HeaderProps> = (props: HeaderProps) => (
+const Header: React.FC<HeaderProps> = ({ siteTitle, ...props }) => (
   <HeaderContainer>
     <Heading>
-      <Link to="/">{props.siteTitle}</Link>
+      <Link to="/">{siteTitle}</Link>
     </Heading>
   </HeaderContainer>
 )
@@ -32,7 +32,7 @@ interface HeaderProps {
 }
 
 Header.defaultProps = {
-  siteTitle: `OSKSAMS AMAZING HEMSIDA`,
+  siteTitle: `OSKSAMS Portfolio`,
 }
 
 export default Header

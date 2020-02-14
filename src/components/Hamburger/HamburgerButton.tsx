@@ -1,15 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-const HamburgerButton: React.FC<Props> = ({ open, setOpen, ...props }) => {
-  return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
-  )
-}
+const HamburgerButton: React.FC<Props> = ({ open, setOpen, ...props }) => (
+  <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <div />
+    <div />
+    <div />
+  </StyledBurger>
+)
 
 interface Props {
   open: Boolean
